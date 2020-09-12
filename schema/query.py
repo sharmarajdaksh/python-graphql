@@ -4,7 +4,8 @@ from auth.query import Query as AuthQuery
 
 
 class Query(graphene.ObjectType):
-    name = "query"
+    class Meta:
+        name = "query"
 
     auth = graphene.Field(AuthQuery, name="auth")
     util = graphene.Field(UtilQuery, name="util")
