@@ -16,3 +16,5 @@ class GithubAuthorize(graphene.Mutation):
             name=github_user_data["name"], email=github_user_data["email"], avatar_url=github_user_data["avatar_url"])
 
         return GithubAuthorize(user_data=user_data)
+
+        # TODO: get_or_create user from db, generate auth_token, return
